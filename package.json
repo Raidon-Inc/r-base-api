@@ -1,26 +1,23 @@
 {
-  "name": "y",
+  "name": "r-base-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Basic Typescript Express API example",
+  "main": "index.ts",
   "scripts": {
     "tsc": "tsc",
+    "build": "tsc",
+    "prod": "tsc && node ./build/index.js",
     "start": "nodemon ./src/index.ts",
-    "dev": "docker-compose -f docker-compose-dev.yml build --no-cache web && docker-compose -f docker-compose-dev.yml build --no-cache mongo-seed && docker-compose -f docker-compose-dev.yml up --renew-anon-volumes",
-    "qa": "docker-compose -f docker-compose-qa.yml build --no-cache web && docker-compose up --renew-anon-volumes",
-    "prod": "docker-compose -f docker-compose.yml build --no-cache web && docker-compose up --renew-anon-volumes",
+    "qa:docker": "docker-compose -f docker-compose-qa.yml build --no-cache api && docker-compose up --renew-anon-volumes",
+    "prod:docker": "docker-compose -f docker-compose.yml build --no-cache api && docker-compose up --renew-anon-volumes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ryaneghrari/raidoninc.git"
+    "url": "git+https://github.com/ryaneghrari/r-base-api"
   },
-  "author": "",
+  "author": "Ryan Eghrari",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ryaneghrari/raidoninc/issues"
-  },
-  "homepage": "https://github.com/ryaneghrari/raidoninc#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "@types/joi": "^14.3.4",

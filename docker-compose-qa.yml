@@ -1,10 +1,8 @@
 version: "2.3"
 services:
-  web:
-    image: ryaneghrari/raidoninc_api-qa:latest
+  api:
     build:
       context: .
       target: qa
-    image: ryaneghrari/raidoninc_api-qa:latest
     ports:
-      - "80:8080"
+      - "8080:8080"
