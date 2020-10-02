@@ -1,0 +1,10 @@
+version: "2.3"
+services:
+  web:
+    image: ryaneghrari/raidoninc_api:latest
+    build:
+      context: .
+      target: prod
+    image: ryaneghrari/raidoninc_api:latest
+    ports:
+      - "80:8080"

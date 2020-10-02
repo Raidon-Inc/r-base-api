@@ -1,0 +1,13 @@
+version: "2.3"
+services:
+  web:
+    environment:
+      - NODE_ENV=dev
+    build:
+      context: .
+      target: dev
+    volumes:
+      - .:/usr/src/app/
+      - /usr/src/app/node_modules
+    ports:
+      - "8080:8080"
